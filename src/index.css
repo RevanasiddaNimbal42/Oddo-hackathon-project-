@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============ THEME TOKENS ============ */
+:root,
+[data-theme='light'] {
+  --color-bg: 248 250 252;
+  --color-surface: 255 255 255;
+  --color-surface-2: 241 245 249;
+  --color-border: 226 232 240;
+  --color-border-soft: 241 245 249;
+  --color-fg: 15 23 42;
+  --color-muted: 100 116 139;
+  --color-subtle: 148 163 184;
+  --color-primary: 37 99 235;
+  --color-primary-fg: 255 255 255;
+  --color-primary-soft: 219 234 254;
+  --color-accent: 14 165 233;
+  --color-success: 22 163 74;
+  --color-success-soft: 220 252 231;
+  --color-warning: 217 119 6;
+  --color-warning-soft: 254 243 199;
+  --color-danger: 220 38 38;
+  --color-danger-soft: 254 226 226;
+  --color-info: 2 132 199;
+  --color-info-soft: 224 242 254;
+}
+
+[data-theme='dark'] {
+  --color-bg: 9 11 16;
+  --color-surface: 17 20 28;
+  --color-surface-2: 26 30 41;
+  --color-border: 38 44 58;
+  --color-border-soft: 30 35 46;
+  --color-fg: 237 240 245;
+  --color-muted: 148 163 184;
+  --color-subtle: 100 116 139;
+  --color-primary: 96 165 250;
+  --color-primary-fg: 8 12 20;
+  --color-primary-soft: 30 58 138;
+  --color-accent: 56 189 248;
+  --color-success: 74 222 128;
+  --color-success-soft: 20 83 45;
+  --color-warning: 251 191 36;
+  --color-warning-soft: 146 64 14;
+  --color-danger: 248 113 113;
+  --color-danger-soft: 127 29 29;
+  --color-info: 56 189 248;
+  --color-info-soft: 12 74 110;
+}
+
+[data-theme='purple'] {
+  --color-bg: 250 248 254;
+  --color-surface: 255 255 255;
+  --color-surface-2: 243 240 252;
+  --color-border: 233 228 245;
+  --color-border-soft: 243 240 252;
+  --color-fg: 30 20 50;
+  --color-muted: 110 95 140;
+  --color-subtle: 150 135 175;
+  --color-primary: 139 92 246;
+  --color-primary-fg: 255 255 255;
+  --color-primary-soft: 237 233 254;
+  --color-accent: 168 85 247;
+  --color-success: 22 163 74;
+  --color-success-soft: 220 252 231;
+  --color-warning: 217 119 6;
+  --color-warning-soft: 254 243 199;
+  --color-danger: 220 38 38;
+  --color-danger-soft: 254 226 226;
+  --color-info: 2 132 199;
+  --color-info-soft: 224 242 254;
+}
+
+[data-theme='emerald'] {
+  --color-bg: 240 252 248;
+  --color-surface: 255 255 255;
+  --color-surface-2: 236 253 245;
+  --color-border: 209 250 229;
+  --color-border-soft: 236 253 245;
+  --color-fg: 6 40 30;
+  --color-muted: 80 120 105;
+  --color-subtle: 130 160 145;
+  --color-primary: 16 185 129;
+  --color-primary-fg: 255 255 255;
+  --color-primary-soft: 209 250 229;
+  --color-accent: 5 150 105;
+  --color-success: 22 163 74;
+  --color-success-soft: 220 252 231;
+  --color-warning: 217 119 6;
+  --color-warning-soft: 254 243 199;
+  --color-danger: 220 38 38;
+  --color-danger-soft: 254 226 226;
+  --color-info: 2 132 199;
+  --color-info-soft: 224 242 254;
+}
+
+[data-theme='ocean'] {
+  --color-bg: 240 249 255;
+  --color-surface: 255 255 255;
+  --color-surface-2: 224 242 254;
+  --color-border: 186 230 253;
+  --color-border-soft: 224 242 254;
+  --color-fg: 8 35 60;
+  --color-muted: 60 100 135;
+  --color-subtle: 110 145 170;
+  --color-primary: 14 165 233;
+  --color-primary-fg: 255 255 255;
+  --color-primary-soft: 224 242 254;
+  --color-accent: 6 182 212;
+  --color-success: 22 163 74;
+  --color-success-soft: 220 252 231;
+  --color-warning: 217 119 6;
+  --color-warning-soft: 254 243 199;
+  --color-danger: 220 38 38;
+  --color-danger-soft: 254 226 226;
+  --color-info: 2 132 199;
+  --color-info-soft: 224 242 254;
+}
+
+[data-theme='sunset'] {
+  --color-bg: 255 248 240;
+  --color-surface: 255 255 255;
+  --color-surface-2: 255 237 213;
+  --color-border: 254 215 170;
+  --color-border-soft: 255 237 213;
+  --color-fg: 45 25 10;
+  --color-muted: 130 90 55;
+  --color-subtle: 170 130 95;
+  --color-primary: 234 88 12;
+  --color-primary-fg: 255 255 255;
+  --color-primary-soft: 255 237 213;
+  --color-accent: 249 115 22;
+  --color-success: 22 163 74;
+  --color-success-soft: 220 252 231;
+  --color-warning: 217 119 6;
+  --color-warning-soft: 254 243 199;
+  --color-danger: 220 38 38;
+  --color-danger-soft: 254 226 226;
+  --color-info: 2 132 199;
+  --color-info-soft: 224 242 254;
+}
+
+* {
+  border-color: rgb(var(--color-border));
+}
+
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-fg));
+  margin: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-border));
+  border-radius: 8px;
+  border: 2px solid rgb(var(--color-bg));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-subtle));
+}
+
+/* Glass utility */
+.glass {
+  background: rgb(var(--color-surface) / 0.7);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+/* Skeleton shimmer */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: rgb(var(--color-surface-2));
+}
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(var(--color-border) / 0.4),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(var(--color-surface)), 0 0 0 4px rgb(var(--color-primary) / 0.5);
+  border-radius: 0.5rem;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-accent)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Recharts theme overrides */
+.recharts-default-tooltip {
+  background: rgb(var(--color-surface)) !important;
+  border: 1px solid rgb(var(--color-border)) !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.1) !important;
+}
+.recharts-tooltip-label {
+  color: rgb(var(--color-fg)) !important;
+  font-weight: 600 !important;
+}
+.recharts-cartesian-axis-tick text {
+  fill: rgb(var(--color-muted)) !important;
+  font-size: 12px;
+}
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgb(var(--color-border-soft)) !important;
+}
